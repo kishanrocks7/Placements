@@ -1,0 +1,15 @@
+vector<int>vec;
+public:
+    vector<int> preorderTraversal(TreeNode* root) {
+       
+        if(root==NULL)
+        {
+            return vec;
+        }
+        else
+        vec.push_back(root->val);
+        preorderTraversal(root->left);
+        preorderTraversal(root->right);
+        return vec;
+        
+    }

@@ -1,0 +1,35 @@
+int matSearch (int N, int M, int matrix[][M], int X)
+{
+     int l=N-1,r=0;
+        while(l >=0  && r < M){
+
+
+            if(matrix[l][r]==X){
+
+
+                return 1;
+
+
+            }
+
+ 
+            if(matrix[l][r] < X){
+
+
+               r++;
+
+
+            }else{
+
+
+                l--;
+
+
+            }
+
+
+        }
+
+
+        return 0;
+}

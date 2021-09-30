@@ -1,0 +1,24 @@
+int longestConsecutive(vector<int>& nums) {
+        set<int>st;
+        int length=0;
+        for(int it:nums)
+        {
+            st.insert(it);
+        }
+        for(int it : nums)
+        {
+            if(st.count(it-1)!=true)
+            {
+                int curnum=it;
+                int curlen=1;
+            
+            while(st.count(curnum+1))
+            {
+                curnum+=1;
+                curlen+=1;
+            }
+            length=max(length,curlen);
+            }
+        }
+        return length;
+    }

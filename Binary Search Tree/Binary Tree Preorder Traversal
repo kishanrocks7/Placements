@@ -1,3 +1,5 @@
+Iterative approach
+
 vector<int>vec;
 public:
     vector<int> preorderTraversal(TreeNode* root) {
@@ -12,4 +14,31 @@ public:
         preorderTraversal(root->right);
         return vec;
         
+    }
+    
+recursive approach
+
+vector<int> preorderTraversal(TreeNode* root) {
+        vector<int>vec;
+        stack<TreeNode*>st;
+        if(root==NULL)
+        {
+            return vec;
+        }
+        st.push(root);
+        while(st.empty()==false)
+        {
+            TreeNode* temp=st.top();
+            vec.push_back(temp->val);
+            st.pop();
+            if(temp->right!=NULL)
+            {
+                st.push(temp->right);
+            }
+            if(temp->left!=NULL)
+            {
+                st.push(temp->left);
+            }
+        }
+        return vec;
     }

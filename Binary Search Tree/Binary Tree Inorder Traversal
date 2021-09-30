@@ -1,0 +1,41 @@
+iterative approach
+
+vector<int>ans;
+    void inorder(TreeNode* root)
+    {
+           if(root==NULL)
+        {
+            return;
+        }
+        inorder(root->left);
+        ans.push_back(root->val);
+        inorder(root->right);
+    }
+    vector<int> inorderTraversal(TreeNode* root) {
+        inorder(root);
+        return ans;
+    }
+    
+    
+    using stack
+    
+    
+   vector<int> inorderTraversal(TreeNode* root) {
+        stack<TreeNode*>st;
+        vector<int>ans;
+        TreeNode *curr=root;
+        while(curr!=NULL || st.empty()==false)
+        {
+            while(curr!=NULL)
+            {
+                st.push(curr);
+                curr=curr->left;
+            }
+            curr=st.top();
+            st.pop();
+            ans.push_back(curr->val);
+            curr=curr->right;
+            
+        }
+        return ans;
+    }

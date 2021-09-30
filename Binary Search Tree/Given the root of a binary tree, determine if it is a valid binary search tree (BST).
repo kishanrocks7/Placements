@@ -1,0 +1,16 @@
+bool check(TreeNode *root, long start, long end)
+    {
+        if(root==NULL)
+        {
+            return true;
+        }
+        if(start<root->val && root->val<end)
+        {
+            return check(root->left,start,root->val) && check(root->right,root->val,end);
+        }
+        return false;
+    }
+    bool isValidBST(TreeNode* root) {
+        return check(root,INT_MIN,INT_MAX);
+    }
+};

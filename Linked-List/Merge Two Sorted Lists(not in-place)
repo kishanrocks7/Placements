@@ -1,0 +1,50 @@
+ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
+        ListNode* c1;
+ListNode* c2;
+ListNode* head= new ListNode();
+ListNode* c3=head ;
+
+    c1=l1;
+    c2=l2;
+    while(c1!=NULL && c2!=NULL){
+        if(c1->val >= c2->val){
+            c3->next=c2;
+            c2=c2->next;
+            c3=c3->next;
+        }
+        else if(c2->val > c1->val){
+            c3->next=c1;
+            c1=c1->next;
+            c3=c3->next;
+        }
+       
+    }
+    if(c1!=NULL) c3->next=c1;
+    else c3->next=c2;
+    return head->next;
+    }
+    
+    or
+    
+    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
+        if(l1==NULL) return l2;
+        if(l2==NULL) return l1;
+        if(l1->val>l1->val)
+        {
+            swap(l1,l2);
+        }
+        ListNode* res=l1;
+        while(l1!=NULL && l2!=NULL)
+        {
+            ListNode *temp=NULL;
+            while(l1!=NULL && l1->val<=l2->val)
+            {
+                temp=l1;
+                l1=l1->next;
+            }
+            temp->next=l2;
+            swap(l1,l2);
+        }
+        return res;
+        
+    }

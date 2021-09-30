@@ -1,0 +1,22 @@
+vector<vector<int>>ans;
+    void check(TreeNode *root , int targetSum ,int currentSum, vector<int>path)
+    {
+        if(root==NULL)
+        {
+            return;
+        }
+        currentSum+=root->val;
+        path.push_back(root->val);
+        if(currentSum==targetSum && root->left==NULL && root->right==NULL)
+        {
+            ans.push_back(path);
+        }
+        check(root->left,targetSum ,currentSum , path);
+                check(root->right,targetSum , currentSum , path);
+        path.pop_back();
+    }
+    vector<vector<int>> pathSum(TreeNode* root, int targetSum) {
+        vector<int>path;
+        check(root,targetSum,0,path);
+        return ans;
+    }

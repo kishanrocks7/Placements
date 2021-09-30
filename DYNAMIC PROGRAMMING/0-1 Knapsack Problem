@@ -37,7 +37,7 @@ int main()
 }
 
 
-using DP
+using DP top down
 
 int knapSack(int W, int wt[], int val[], int n)
 {

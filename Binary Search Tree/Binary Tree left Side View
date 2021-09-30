@@ -1,0 +1,19 @@
+vector<int> rightSideView(TreeNode* root) {
+        vector<int>res;
+        recurson(root,0,res);
+        return res;
+    }
+    void recurson(TreeNode* root,int level,vector<int>&ans)
+    {
+        if(root==NULL)
+        {
+            return;
+        }
+        if(ans.size()==level)
+        {
+            ans.push_back(root->val);
+        }
+        recurson(root->left,level+1,ans);
+        recurson(root->right,level+1,ans);
+        
+    }

@@ -1,0 +1,40 @@
+vector<vector<int>> fourSum(vector<int>& nums, int target) {
+        set<vector<int>>box;
+        int n=nums.size();
+        int i,j;
+        int sum=0;
+        sort(nums.begin(),nums.end());
+        for(i=0;i<n-3;i++)
+            if(nums[i]==nums[i-1])continue;
+        for(j=i+1;j<n-2;j++)
+            if(nums[j]==nums[j-1])continue;
+        int left=j+1;
+        int right=n-1;
+        while(left<right)
+        {
+            sum=nums[i]+nums[j]+nums[left]+nums[right];
+            if(sum==target)
+            {
+                vector<int>st;
+                st.push_back(nums[i]);
+                st.push_back(nums[j]);
+                st.push_back(nums[left]);
+                st.push_back(nums[right]);
+                box.insert(st);
+                left=left+1;
+            }
+            else if(sum<target)
+            {
+                left=left+1;
+            }
+            else{
+                right=right+1;
+            }
+        }
+        vector<vector<int>>ans;
+        for(auto it: box)
+        {
+            ans.push_back(it);
+        }
+        return ans;
+    }

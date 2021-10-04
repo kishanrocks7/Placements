@@ -16,3 +16,9 @@ int findDuplicate(vector<int>& nums) {
         }
         return fast;
     }
+
+whenever we have a single repeating number in an array we have a cycle so here we can use fast and slow pointer method
+fitst we move slow to the index slow in nums array and we will move fast to index nums[fast] we willl do this until fast is equal to slow
+afte this we will change fast to num[0] and start moving fast at index fast and slow at index slow
+finally fast and slow will meet at the pint whwew cycle is strating
+hence the duplicate point

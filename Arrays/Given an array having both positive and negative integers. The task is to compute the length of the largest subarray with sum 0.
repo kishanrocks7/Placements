@@ -25,3 +25,8 @@ int maxLen(int A[], int n)
     }
     return maxi;
 }
+
+
+what weneed to do here is first of all we will declare a map and we willl start iterationg and adding from index 0, if we gets sum=0, we will update our maxi variable to i+1 ,
+otherwise we will check in the map , if this sum was earlier present on any other index then we will update maxi to maximum of maxi and i-mp[sum] otherwise we will update the sum with
+the current index into the map.

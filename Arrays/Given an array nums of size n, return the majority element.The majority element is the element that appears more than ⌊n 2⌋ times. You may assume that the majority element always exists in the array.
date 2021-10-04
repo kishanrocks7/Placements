@@ -19,3 +19,8 @@ int majorityElement(vector<int>& nums) {
         return candidate;
         
     }
+    
+    what we are doing here is by intution we know if number is ocurring more tham n/2 times we cant have more than a single number so we have a candidate varibale wich will be our
+    answer so iteratinf among the array using iterator if our count is 0 we will update candidate to nums
+    if nums is = candidate than we will increment the count, else we will decrement the count
+    at the last num we will have out required value in candidate variable

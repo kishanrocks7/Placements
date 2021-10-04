@@ -15,3 +15,8 @@ vector<int> twoSum(vector<int>& nums, int target) {
         }
         return ans;
     }
+    
+    
+    we are keeping track of numbers we have crossed through in a map
+    so while iterating , firsst of all we check if target-nums[i] is not presnt in the map , if its present we will update our answer vector with current index anf index of target-sum from the map
+    else we will updat the current element in the map with its index and finally returnng the answer.

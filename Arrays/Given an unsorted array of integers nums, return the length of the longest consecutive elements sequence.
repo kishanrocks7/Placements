@@ -22,3 +22,11 @@ int longestConsecutive(vector<int>& nums) {
         }
         return length;
     }
+
+
+first of all to eradicate duplicate numbers we will push elemsts into a set , then we will stsrt the iteration
+after takinf first number we will check if any number lesser than this is present in the array and we will declare currlen and curnum and take that number to curnum 
+and increase the curlen to 1
+now we will chek with adding 1 to that numer is present or not if presnt we will take that number and increment curlength
+otherwwise we will update lenght my max of (lenght and curlen)
+return length as answer

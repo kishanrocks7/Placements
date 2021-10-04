@@ -16,6 +16,10 @@ void merge(long long arr1[], long long arr2[], int n, int m)
         } 
 };
 
+
+in this mthod we iterate through arrays until arr1[n-1] >arr2[0]
+so if arr1[i]>arr2[0} we will swap both and we will sort arr2;
+and i++
 or 
 
 void merge(long long arr1[], long long arr2[], int n, int m) 
@@ -34,3 +38,7 @@ void merge(long long arr1[], long long arr2[], int n, int m)
             sort(arr1,arr1+n);
             sort(arr2,arr2+m);
         }
+        
+        
+        otherwise what we can do is we can keep swapping until i>0 and j<m if(arr1[i]>arr2[j]) where i is n-1 and j is 0
+        so after all the swappings we sort both the arrays

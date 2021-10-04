@@ -50,3 +50,11 @@ vector<int> majorityElement(vector<int>& nums) {
         }
         return ans;
     }
+    
+    
+    as we know there cant be more than two elements occuring more than n/3 times so we will take two varibales num1 and num2 with two counts count 1 and count 2 
+    we will start the iteration with the conditon if nums[i]==num1 then count1++ else if num[i]==num2 then count 2++ then
+    if count1 =0 we will update num1 to nums[i] with count1++ if count 2==0 we will update the num2 with num[i] with count2++
+    otherwise we need to decrement both count 1 and count 2
+    
+    even after this we need to check how many times num1 and num2 are occuring if greater than n/3 times we have our answer.

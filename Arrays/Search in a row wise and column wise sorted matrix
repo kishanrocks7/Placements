@@ -33,3 +33,8 @@ int matSearch (int N, int M, int matrix[][M], int X)
 
         return 0;
 }
+
+what we can do here is as we know it sorted in both directions so
+running the loop from back of first row that is last column and from the first row
+so if we finf the target numner < than the top right corner element we will decrement column and check if it is present in that row or not
+if number is greater than we will increment the row number and will iterate untill we get the elemtnst

@@ -12,3 +12,7 @@ void rotate(vector<vector<int>>& matrix) {
             reverse(matrix[i].begin(),matrix[i].end());
         }
     }
+    
+    
+    as we cant directly rortate it so fist we are doing transpose that is switching arr[i][j] to arr[j][i] and afte this process we will reverse elemts rowwise
+    

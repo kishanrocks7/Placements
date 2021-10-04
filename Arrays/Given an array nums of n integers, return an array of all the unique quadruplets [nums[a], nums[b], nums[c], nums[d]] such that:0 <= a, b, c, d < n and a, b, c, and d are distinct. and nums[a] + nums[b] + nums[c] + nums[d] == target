@@ -38,3 +38,12 @@ vector<vector<int>> fourSum(vector<int>& nums, int target) {
         }
         return ans;
     }
+
+first of all we will declare an set to reduce repeating quadruples , andd sort the given vector , then staritng with our first iteration with a continue if number repeats itself similarly secod iteration so we will
+take two variables left and right, left will be j+1 and right will be n-1 . so with a while loop until left is less than right 
+first swe will chcek if nums sum i.e nums[i]+nums[j]+nums[right]+nums[left] is ewual to target sum so we will push all these i,j,left,right in a vector and will push thatvector into 
+our set
+otherwise if sum is less than target we will increment left
+if sum >target we will decremetnt right;
+
+after all this we will push all vectors stored in set into a vector of vector variable , which will be our answer.

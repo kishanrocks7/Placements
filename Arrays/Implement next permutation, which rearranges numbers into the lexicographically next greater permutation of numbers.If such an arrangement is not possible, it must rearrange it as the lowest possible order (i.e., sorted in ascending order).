@@ -26,3 +26,8 @@ void nextPermutation(vector<int>& nums) {
             reverse(nums.begin()+idx,nums.end());
         }
     }
+
+
+as with the lexographical graph knowledge what wwe need to do is , we need to iterate from back until we find a nuber which is lesser than the last number meaning n-i<n-i-1
+then from index i to n we need to find the number which is greater than the number at index i-1 and lesser than the number at index i and we will swap those number and after that 
+we will reverse the array from i to n.

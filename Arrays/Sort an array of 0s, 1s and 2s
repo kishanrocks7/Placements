@@ -29,3 +29,6 @@ void sort012(int a[], int n)
         }
     }
 }
+
+
+we are putting 0 1 and 2 ar low mid and high respectively with increasing and decreasing indexees accordingly

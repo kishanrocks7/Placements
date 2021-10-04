@@ -33,3 +33,13 @@ void setZeroes(vector<vector<int>>& matrix) {
             }
         
     }
+    
+    
+    we can use the first row and first column for storing our reffrences for turning the whole row and collumn zero
+    first of all we will create a flag for first row and first column and mark it flase for now;
+    now start with the iteration that will be two for loops for rows and colums at first ifarr[i][j]==0 then if i=0 turn flag=0 
+    otherwise turn that row and column zero with arr[0][j]=0 and arr[i][0]=0
+    after this if out flag is true we will again iterate to turn first row and first column zero;
+    
+    
+     

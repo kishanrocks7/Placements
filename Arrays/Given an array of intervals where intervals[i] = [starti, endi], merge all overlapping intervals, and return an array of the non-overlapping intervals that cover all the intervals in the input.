@@ -21,3 +21,9 @@ vector<vector<int>> merge(vector<vector<int>>& intervals) {
         merged.push_back(temp);
         return merged;
     }
+
+
+first of all we are sorting the interval for out futher use. we are making a temp vector with our first interval sstored, then we are starting the iteration with iterator
+at first we will check if starting time of iterator is lesser than the ending time of temp if it is so then we will update the temp end time to end time of iterator
+other wise we will push that interval to our vector and will move to next it with temp=it
+after this we will push our temp to answer vector and returning the result

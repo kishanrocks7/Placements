@@ -33,3 +33,11 @@ ListNode* reverse(ListNode *head)
         return true;
         
     }
+    
+    
+    
+    
+    first of all witht the help of fast and slow pointer we will reach the mid of linked list
+    than we will reverse the linked list from mid to the end 
+    then we will iterate with two pointers one from the head other from the mid
+    if both stays equal until mid reaches null we have a palindromic linked list

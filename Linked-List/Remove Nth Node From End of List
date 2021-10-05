@@ -15,3 +15,9 @@ ListNode* removeNthFromEnd(ListNode* head, int n) {
         slow->next=slow->next->next;
         return start->next;
     }
+
+
+here aagain we can use slow and fast pointer first we will move fast pointer n time than we will move bothe fast and slow piointer all together until fast becomes null
+or slow pointer will be pointing prev node of the node we wanted to delete.
+nnow we will simply move slow->next->next
+retunr srart->nex;

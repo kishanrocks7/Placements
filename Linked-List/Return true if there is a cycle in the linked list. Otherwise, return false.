@@ -16,3 +16,6 @@ bool hasCycle(ListNode *head) {
         }
         return false;
     }
+
+
+if there is a cycle both slow and fast pioinetr will meet withouting reaching null hence we will use slow and fast pointer techniwue again

@@ -11,3 +11,7 @@ void printMiddle(class Node *head){
             }
             cout << "The middle element is [" << slow_ptr->data << "]" << endl;
         }
+
+here we can use tortoise method we will take two pointers pointing to the head and we will start movinf one pointer twice and other pointer once when fast pointer will reach the end of the list
+slow pointer will be on the middle node
+return the slow pointer data.

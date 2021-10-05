@@ -24,3 +24,6 @@ ListNode *detectCycle(ListNode *head) {
         return NULL;
         
     }
+    
+    we are using a three pointer method here we have fast slow and entry pointer first we move fast pointer to fast to  next of next and slow point to next of slow
+    until fast meets slow then we move entry and slow pointer until both meet , both will meet at the point from where cycle starts

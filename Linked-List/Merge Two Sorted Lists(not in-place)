@@ -48,3 +48,23 @@ ListNode* c3=head ;
         return res;
         
     }
+    
+    what we are doing her is , we will take two pointer pointing to l1 and l2 and we will keep l1 at the smaller node otherwise
+    if we finds l1 greater than l2 wil swap.    
+    if l1 is null we have l2 as our answer
+    if l2 is null we have l1 as our answer.
+    if l1>l2 we will swap 
+    
+    crearte a node res and point to l1;
+    until l1 and l2 both are not null we will creeate a temp node;
+    and with condition that l1 not null and l1<l2
+    we will point temp to l1
+    move l1 to its next;
+    
+    when l1 is no more smaller than l2 we will point temp to l2 and swap(l1,l2) to start pointing l1 to the smaller one.
+    finally retunr the result
+
+    otherwise we will iterate until c1 reaches null and c2 reaches null
+    
+    
+    

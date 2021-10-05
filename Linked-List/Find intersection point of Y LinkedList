@@ -26,3 +26,6 @@ ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
         }
         return a;
     }
+
+what we can do here is we can start with one one pointer on both heads and we will start moving pointers until the end of the list and as we reach the end of the list
+we will switch pointer to the other head and will keep moving and switching at the end until both pointers meet at a point that point will be our intersection point

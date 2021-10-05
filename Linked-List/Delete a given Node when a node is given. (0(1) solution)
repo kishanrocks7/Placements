@@ -2,3 +2,5 @@ void deleteNode(ListNode* node) {
         node->val=node->next->val;
         node->next=node->next->next;
     }
+
+as we dont have the previous node , we dont have any option other than storing next node value in given node and pointing next to (next ofnext)

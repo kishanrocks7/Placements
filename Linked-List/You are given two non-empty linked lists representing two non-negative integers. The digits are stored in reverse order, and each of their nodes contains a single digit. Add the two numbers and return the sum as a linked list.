@@ -23,3 +23,14 @@
         }
         return dummy->next;
     }
+
+
+firs we will create a dummy node and make it equal to temp and declare carry as 0.
+then we will iterate util anyy of the l1 or l2 turns null or carry not=0
+declare sum as 0
+then if l1 is not null we will add l1 to sum and l1=l1->nect
+if l2 not null we will add l2 to sum l2=l2->next
+altogeether we will keep adding caary to thr sum and chnage carry to sum/10 and 
+we will make a new node with value sum%10
+give node to next of temp
+move temp to its next

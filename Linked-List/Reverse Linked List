@@ -9,3 +9,11 @@ ListNode* reverseList(ListNode* head) {
         }
         return temp;
     }
+
+
+what we will do here is we will make a temp node out of the list and a next node pointing next to the head
+we wil iterate until head beecomes null
+first we will point head to next to temp
+temp=head
+and head =next;
+finally return temp;

@@ -21,3 +21,10 @@ ListNode* rotateRight(ListNode* head, int k) {
         temp->next=NULL;
         return head;
           }
+
+
+first of all we will chek boundary conditon as head=null head->next=null or k=0
+then we will retun head
+otherwise we will first find the size of linked list
+then we will change k to k%n and subtract it from the count, to optimise our solution ie if k is grater than length of linked list
+then we will make a pointer pointing to head and we will move the pointer k times to its next and finally we will make head equal to the last pointer and we will point tmep to NULL

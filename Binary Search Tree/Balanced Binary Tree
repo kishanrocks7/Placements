@@ -15,3 +15,8 @@ int height(TreeNode * root)
         return isBalanced(root->left) && isBalanced(root->right) && abs(height(root->left)-height(root->right))<=1;
         
     }
+
+here what we can do is we will use recursion at first to return height from a particular node using height function which will take root as input
+for boundary condition if root=NULL return 0 height otherwise find max of right and left height from that node and return it
+now in the main function if root==null mean no node hence balanced tree so return true.
+other wise return the same function with root->right && root->left && abs(height(root->left)-height(root->right))<=1;

@@ -16,9 +16,13 @@ vector<int>ans;
         return ans;
     }
     
+ we will declare a global vector that will store our answers we will make an another inorder function that will do recursion and store valus in ans vector
+ so first check boundary conditons i.e if root =null return;
+ otherwise do inorder on root->left and store root->val then recur on root->right
+ in our main function just apply this inorder function on root and return ans vector
+
     
     using stack
-    
     
    vector<int> inorderTraversal(TreeNode* root) {
         stack<TreeNode*>st;
@@ -39,3 +43,9 @@ vector<int>ans;
         }
         return ans;
     }
+    
+    firs create a stack of treenode type we will iterate until root!=NULL or st is not empty
+    now again for condtion root!=NULL
+    push node into the stack and move to node to left
+    now after root->left becomes null , come out of the loop and we will store the top of stack on root and pop the stack and push answer inti vector
+    and move to left

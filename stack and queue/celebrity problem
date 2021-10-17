@@ -1,0 +1,15 @@
+int celebrity(vector<vector<int> >& M, int n) 
+   {
+      int celebrity=0;
+      for(int i=0;i<n;i++){
+          if(M[celebrity][i]==1){
+              celebrity=i;
+          }
+      }
+      for(int i=0;i<n;i++){
+          if(celebrity!=i && (M[celebrity][i]==1 || M[i][celebrity]==0 )){
+            return -1;
+          }
+      }
+      return celebrity;
+   }
